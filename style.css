@@ -470,6 +470,14 @@ flex-wrap: wrap;
     font-size: 0.85rem;
     padding: 0.3rem;
   }
+    .btn-outline {
+    display: block;       
+    width: 100%;          
+    text-align: center;   
+    padding: 10px 0;      
+    box-sizing: border-box; 
+}
+
 
 }
 
@@ -505,3 +513,4 @@ flex-wrap: wrap;
   border-radius:6px; 
   background:#fff; 
 }
+
