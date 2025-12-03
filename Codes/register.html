@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Register - ClickSpace</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo"><img src="../Assets/logo.png" alt="logo"><h1>ClickSpace</h1></div>
+      <nav class="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="product.html">Products</a></li>
+          <li><a href="cart.html">Cart <span id="cart-count" class="badge">0</span></a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="index.html">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2 style="margin-top:1rem">Register</h2>
+    <div class="form-card" style="max-width:720px">
+      <form id="register-form" aria-label="Register form" onsubmit="event.preventDefault(); registerUser(this);">
+
+        <div class="form-row">
+          <label for="firstName">First Name</label>
+          <input id="firstName" name="firstName" class="input" required>
+        </div>
+
+        <div class="form-row">
+          <label for="lastName">Last Name</label>
+          <input id="lastName" name="lastName" class="input" required>
+        </div>
+
+        <div class="form-row">
+          <label for="dob">Date of Birth</label>
+          <input id="dob" name="dob" class="input" type="date" required>
+        </div>
+
+        <div class="form-row">
+          <label for="gender">Gender</label>
+          <select id="gender" name="gender" class="input" required>
+            <option value="">Select gender</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label for="phone">Phone Number</label>
+          <input id="phone" name="phone" class="input" type="tel" required>
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" class="input" type="email" required>
+        </div>
+
+        <div class="form-row">
+          <label for="trn">TRN (format 000-000-000)</label>
+          <input id="trn" name="trn" class="input" pattern="\d{3}-\d{3}-\d{3}" required>
+        </div>
+
+        <div class="form-row">
+          <label for="password">Password</label>
+          <input id="password" name="password" class="input" type="password" required>
+        </div>
+
+        <div class="form-row">
+          <label for="confirm-password">Confirm Password</label>
+          <input id="confirm-password" name="confirm-password" class="input" type="password" required>
+        </div>
+
+        <div class="form-actions">
+          <button class="btn btn-primary" type="submit">Register</button>
+          <button class="btn btn-outline" type="button" onclick="document.getElementById('register-form').reset()">Cancel</button>
+          <a class="btn btn-primary" href="index.html">Back to Login</a>
+        </div>
+
+      </form>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2025 ClickSpace</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

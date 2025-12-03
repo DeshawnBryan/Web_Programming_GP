@@ -1,0 +1,146 @@
+
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Products - ClickSpace</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <img src="../Assets/logo.png" alt="ClickSpace logo">
+        <h1>ClickSpace</h1>
+      </div>
+      <nav class="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="product.html" class="active">Products</a></li>
+          <li><a href="cart.html">Cart <span id="cart-count" class="badge">0</span></a></li>
+          <li><a href="checkout.html">Checkout</a></li>
+          <li><a href="invoice.html">Invoice</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="index.html">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- MAIN CONTENT -->
+  <main class="container">
+
+    <!-- Mouse & Mousepads -->
+    <div class="category-section">
+      <h3>Mouses</h3>
+      <div class="products-grid">
+
+        <div class="card">
+          <img src="../Assets/mouse1.png" alt="Gaming Mouse 1">
+          <h4>Logitech Mouse</h4>
+          <p>With a comfortable and contoured shape, this Logitech ambidextrous wireless mouse feels great in either right or left hand and is far superior to a touchpad.</p>
+          <p class="price">$25.00</p>
+          <button class="btn btn-primary" onclick="addToCart('Logitech Mouse', 25, 'mouse1.png')">Buy</button>
+        </div>
+
+        <div class="card">
+          <img src="../Assets/mouse2.png" alt="Gaming Mouse 2">
+          <h4>TECKNET Ergonomic Mouse</h4>
+          <p>This ergonomic mouse promotes a natural wrist and arm position, minimizing hand fatigue from prolonged use.</p>
+          <p class="price">$30.00</p>
+          <button class="btn btn-primary" onclick="addToCart('TECKNET Ergonomic Mouse', 30, 'mouse2.png')">Buy</button>
+        </div>
+
+        <div class="card">
+          <img src="../Assets/mouse3.png" alt="Gaming Mousepad">
+          <h4>AeroCurve Pro</h4>
+          <p>AeroCurve Pro allows for comfortable hand posture with its smooth upward curvature.</p>
+          <p class="price">$20.00</p>
+          <button class="btn btn-primary" onclick="addToCart('AeroCurve Pro', 20, 'mouse3.png')">Buy</button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Keyboards -->
+    <div class="category-section">
+      <h3>Keyboards</h3>
+      <div class="products-grid">
+
+        <div class="card">
+          <img src="../Assets/keyboard1.png" alt="Mechanical Keyboard 1">
+          <h4>Perixx Keyboard</h4>
+          <p>Split-key and 3D design matching natural arm positions with an integrated palm rest.</p>
+          <p class="price">$80.00</p>
+          <button class="btn btn-primary" onclick="addToCart('Perixx Keyboard', 80, 'keyboard1.png')">Buy</button>
+        </div>
+
+        <div class="card">
+          <img src="../Assets/keyboard2.png" alt="Mechanical Keyboard 2">
+          <h4>Incase Sculpt Ergonomic Keyboard</h4>
+          <p>The Sculpt Ergonomic Keyboard enhances productivity and comfort.</p>
+          <p class="price">$90.00</p>
+          <button class="btn btn-primary" onclick="addToCart('Incase Sculpt Ergonomic Keyboard', 90, 'keyboard2.png')">Buy</button>
+        </div>
+
+        <div class="card">
+          <img src="../Assets/keyboard3.png" alt="Mechanical Keyboard 3">
+          <h4>Iris LM - Low-Profile Split Ergonomic Keyboard</h4>
+          <p>A split keyboard designed for optimal comfort and workspace flexibility.</p>
+          <p class="price">$85.00</p>
+          <button class="btn btn-primary" onclick="addToCart('Split Ergonomic Keyboard', 85, 'keyboard3.png')">Buy</button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Chairs -->
+    <div class="category-section">
+      <h3>Chairs</h3>
+      <div class="products-grid">
+
+        <div class="card">
+          <img src="../Assets/chair1.png" alt="Ergonomic Chair 1">
+          <h4>PatioMage Ergonomic Office Chair</h4>
+          <p>Adjustable headrest, lumbar support, armrest, seat depth and height for maximum comfort.</p>
+          <p class="price">$200.00</p>
+          <button class="btn btn-primary" onclick="addToCart('PatioMage Ergonomic Office Chair', 200, 'chair1.png')">Buy</button>
+        </div>
+
+        <div class="card">
+          <img src="../Assets/chair2.png" alt="Ergonomic Chair 2">
+          <h4>Branch Ergonomic Chair</h4>
+          <p>Adjustable seat, backrest, and armrests with smooth-rolling wheels for easy mobility.</p>
+          <p class="price">$220.00</p>
+          <button class="btn btn-primary" onclick="addToCart('Branch Ergonomic Chair', 220, 'chair2.png')">Buy</button>
+        </div>
+
+        <div class="card">
+          <img src="../Assets/chair3.png" alt="Ergonomic Chair 3">
+          <h4>HUANUO Ergonomic Mesh Office Chair</h4>
+          <p>Innovative lumbar system with five precise adjustment levels for long work sessions.</p>
+          <p class="price">$210.00</p>
+          <button class="btn btn-primary" onclick="addToCart('HUANUO Ergonomic Mesh Office Chair', 210, 'chair3.png')">Buy</button>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2025 ClickSpace</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

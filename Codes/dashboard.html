@@ -1,0 +1,66 @@
+
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard - ClickSpace</title>
+  <link rel="stylesheet" href="../style.css" />
+
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo"><img src="../Assets/logo.png" alt="logo"><h1>ClickSpace</h1></div>
+      <nav class="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="product.html">Products</a></li>
+          <li><a href="cart.html">Cart <span id="cart-count" class="badge">0</span></a></li>
+          <li><a href="checkout.html">Checkout</a></li>
+          <li><a href="invoice.html">Invoice</a></li>
+          <li><a class="active" href="dashboard.html">Dashboard</a></li>
+          <li><a href="index.html">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>Dashboard</h2>
+
+    <section class="form-card">
+      <h3>User Frequency (Gender)</h3>
+      <div id="gender-chart"></div>
+
+      <h3>User Frequency (Age Groups)</h3>
+      <div id="age-chart"></div>
+    </section>
+
+    <section class="form-card" style="margin-top:1rem;">
+      <h3>All Invoices</h3>
+      <div id="invoices-list"></div>
+    </section>
+
+    <section class="form-card" style="margin-top:1rem;">
+      <h3>Your Invoices</h3>
+      <div id="user-invoices"></div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2025 ClickSpace</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+  <script>
+    const loggedTRN = sessionStorage.getItem('loggedInTRN');
+    if (loggedTRN) {
+      setTimeout(()=> { GetUserInvoices(loggedTRN); }, 250);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Checkout - ClickSpace</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo"><img src="../Assets/logo.png" alt="logo"><h1>ClickSpace</h1></div>
+      <nav class="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="product.html">Products</a></li>
+          <li><a href="cart.html">Cart <span id="cart-count" class="badge">0</span></a></li>
+          <li><a class="active" href="checkout.html">Checkout</a></li>
+          <li><a href="invoice.html">Invoice</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="index.html">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>Checkout</h2>
+    <div id="checkout-items" class="form-card"></div>
+
+    <form id="checkout-form" onsubmit="event.preventDefault(); confirmCheckout(this);">
+      <h3>Shipping Details</h3>
+      <input class="form-card1" type="text" id="name" name="name" placeholder="Full Name" required>
+      <input class="form-card1" type="text" id="address" name="address" placeholder="Address" required>
+      <input class="form-card1" type="text" id="city" name="city" placeholder="City" required>
+      <input class="form-card1" type="text" id="zip" name="zip" placeholder="ZIP/Postal Code" required>
+      <input class="form-card1" type="number" id="amount" name="amount" placeholder="Payment Amount" required>
+      <div style="margin-top:.5rem;">
+        <button class="btn btn-primary" type="submit">Confirm</button>
+        <button class="btn btn-outline" type="button" id="cancel-btn" onclick="window.location.href='cart.html'">Cancel</button>
+      </div>
+    </form>
+
+    <div id="cart-summary" class="cart-summary" style="margin-top:1rem;"></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2025 ClickSpace</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

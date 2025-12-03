@@ -1,0 +1,62 @@
+
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login - ClickSpace</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <img src="../Assets/logo.png" alt="ClickSpace logo">
+        <h1>ClickSpace</h1>
+      </div>
+      <nav class="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="product.html">Products</a></li>
+          <li><a href="cart.html">Cart <span id="cart-count" class="badge">0</span></a></li>
+          <li><a href="checkout.html">Checkout</a></li>
+          <li><a href="invoice.html">Invoice</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a class="active" href="index.html">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2 style="margin-top:1rem">Login</h2>
+    <div class="form-card" style="max-width:480px">
+      <form id="login-form" aria-label="Login form" onsubmit="event.preventDefault(); attemptLogin(this);">
+        <div class="form-row">
+          <label for="trn">TRN</label>
+          <input id="trn" name="trn" class="input" pattern="\d{3}-\d{3}-\d{3}" required>
+        </div>
+        <div class="form-row">
+          <label for="password">Password</label>
+          <input id="password" name="password" class="input" type="password" required>
+        </div>
+        <div class="form-actions">
+          <button class="btn btn-primary" type="submit">Login</button>
+          <a href = register.html class = "btn btn-primary">Register</a>
+          <a class="btn btn-primary" href="#" onclick="resetPasswordPrompt(); return false;">Reset Password</a>
+          <button class="btn btn-outline" type="button" onclick="document.getElementById('login-form').reset()">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2025 ClickSpace</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
