@@ -418,7 +418,7 @@ flex-wrap: wrap;
   .main{ 
     width:76%; 
   }
-     .invoice-container {
+   .invoice-container {
     max-width: 1200px;   
     margin: 0 auto;
     padding: 20px;
@@ -444,6 +444,7 @@ flex-wrap: wrap;
   .invoice-table th:nth-child(5) { width: 12%; } /* Discount */
   .invoice-table th:nth-child(6) { width: 12%; } /* Tax */
   .invoice-table th:nth-child(7) { width: 12%; } /* Total */
+  
 }
 
 /* Mobile Layout */
@@ -496,12 +497,12 @@ flex-wrap: wrap;
     font-size: 0.85rem;
     padding: 0.3rem;
   }
-    .btn-outline {
-    display: block;       
-    width: 100%;          
-    text-align: center;   
-    padding: 10px 0;      
-    box-sizing: border-box; 
+  .btn-outline {
+    display: block;       /* Makes the button a block-level element */
+    width: 100%;          /* Makes it stretch to fill the container */
+    text-align: center;   /* Centers the text inside the button */
+    padding: 10px 0;      /* Optional: adjust padding for height */
+    box-sizing: border-box; /* Ensures padding doesn’t overflow */
 }
 .btn-secondary{
     display: block;       
@@ -510,6 +511,8 @@ flex-wrap: wrap;
     padding: 10px 0;      
     box-sizing: border-box;
 }
+ 
+
 
 }
 
@@ -529,8 +532,7 @@ flex-wrap: wrap;
   background:var(--accent); 
   border-radius:6px; 
   padding-left:8px; 
-  display:flex; align-items:center; color:var(--primary); font-weight:700; 
-}
+  display:flex; align-items:center; color:var(--primary); font-weight:700; }
 
 .invoice-card { 
   background:#fff; 
@@ -546,5 +548,3 @@ flex-wrap: wrap;
   border-radius:6px; 
   background:#fff; 
 }
-
-
